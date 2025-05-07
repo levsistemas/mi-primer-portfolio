@@ -45,9 +45,9 @@ function App() {
               
               <div className="project-image-item">
                 <img 
-                  src={process.env.PUBLIC_URL + "/mi-primer-portfolio/images/wireframe_digital.png"} 
+                  src={process.env.PUBLIC_URL + "/mi-primer-portfolio/images/wareframe_digital.png"} 
                   alt="Wireframes digital" 
-                  onClick={() => openImage("/mi-primer-portfolio/images/wireframe_digital.png")}
+                  onClick={() => openImage("/mi-primer-portfolio/images/wareframe_digital.png")}
                   className="clickable-image"
                 />
                 <div className="image-description">
