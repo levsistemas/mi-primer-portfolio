@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import Header from './Header';
 import './style.css';
 
@@ -32,9 +32,9 @@ function App() {
             <div className="project-images-container">
               <div className="project-image-item">
                 <img 
-                  src={process.env.PUBLIC_URL + "/images/wareframe_fisico.jpeg"} 
+                  src={process.env.PUBLIC_URL + "/mi-primer-portfolio/images/wareframe_fisico.jpeg"} 
                   alt="Wireframes físico" 
-                  onClick={() => openImage("/images/wareframe_fisico.jpeg")}
+                  onClick={() => openImage("/mi-primer-portfolio/images/wareframe_fisico.jpeg")}
                   className="clickable-image"
                 />
                 <div className="image-description">
@@ -45,9 +45,9 @@ function App() {
               
               <div className="project-image-item">
                 <img 
-                  src={process.env.PUBLIC_URL + "/images/wireframe_digital.png"} 
+                  src={process.env.PUBLIC_URL + "/mi-primer-portfolio/images/wireframe_digital.png"} 
                   alt="Wireframes digital" 
-                  onClick={() => openImage("/images/wireframe_digital.png")}
+                  onClick={() => openImage("/mi-primer-portfolio/images/wireframe_digital.png")}
                   className="clickable-image"
                 />
                 <div className="image-description">
@@ -65,15 +65,15 @@ function App() {
         <h2>Habilidades</h2>
         <div className="skills-scroll">
           {[
-            { name: 'HTML', logo: '/images/html_logo.png', level: 90 },
-            { name: 'CSS', logo: '/images/css_logo.png', level: 80 },
-            { name: 'JavaScript', logo: '/images/javascript_logo.png', level: 40 },
-            { name: 'TypeScript', logo: '/images/logo_typescript.png', level: 0 },
-            { name: 'React', logo: '/images/logo_react.png', level: 10 },
-            { name: 'GitHub', logo: '/images/logo_github.png', level: 10 },
-            { name: 'ChatGPT', logo: '/public/images/chatgpt_logo.png', level: 85 },
-            { name: 'WordPress', logo: '/images/wordpress_logo.jpg', level: 50 },
-            { name: 'Salesforce', logo: '/images/salesforce_logo.png', level: 60 }
+            { name: 'HTML', logo: '/mi-primer-portfolio/images/html_logo.png', level: 90 },
+            { name: 'CSS', logo: '/mi-primer-portfolio/images/css_logo.png', level: 80 },
+            { name: 'JavaScript', logo: '/mi-primer-portfolio/images/javascript_logo.png', level: 40 },
+            { name: 'TypeScript', logo: '/mi-primer-portfolio/images/logo_typescript.png', level: 0 },
+            { name: 'React', logo: '/mi-primer-portfolio/images/logo_react.png', level: 10 },
+            { name: 'GitHub', logo: '/mi-primer-portfolio/images/logo_github.png', level: 10 },
+            { name: 'ChatGPT', logo: '/mi-primer-portfolio/images/chatgpt_logo.png', level: 85 },
+            { name: 'WordPress', logo: '/mi-primer-portfolio/images/wordpress_logo.jpg', level: 50 },
+            { name: 'Salesforce', logo: '/mi-primer-portfolio/images/salesforce_logo.png', level: 60 }
           ].map((skill) => (
             <div key={skill.name} className="skill-item">
               <div className="skill-icon-container">
@@ -111,21 +111,21 @@ function App() {
               {[
                 { 
                   title: 'E-commerce / Front-end', 
-                  logo: '/images/iskaypet_logo.png', 
+                  logo: '/mi-primer-portfolio/images/iskaypet_logo.png', 
                   year: '2022-Actualidad',
                   institution: 'Iskaypet',
                   description: 'Programación y maquetación de Landing page, Home, y categorías de las campañas'
                 },
                 { 
                   title: 'Advertiser Management', 
-                  logo: '/images/awin_logo.jpg', 
+                  logo: '/mi-primer-portfolio/images/awin_logo.jpg', 
                   year: '2021-2022',
                   institution: 'Awin',
                   description: 'Programación de herramientas de interfaz de usuario'
                 },
                 { 
                   title: 'Especialista en SEO', 
-                  logo: '/images/global_logo.jpg', 
+                  logo: '/mi-primer-portfolio/images/global_logo.jpg', 
                   year: '2021',
                   institution: 'Global Commerce Media',
                   description: 'Investigación para formar estructuras de redacción con Wordpress'
@@ -155,25 +155,25 @@ function App() {
               {[
                 { 
                   title: 'Máster en Marketing Digital y Comercio Electrónico', 
-                  logo: '/images/eae_logo.png', 
+                  logo: '/mi-primer-portfolio/images/eae_logo.png', 
                   year: '2020-2022',
                   institution: 'EAE Business School'
                 },
                 { 
                   title: 'Inteligencia artificial generativa', 
-                  logo: '/images/linkeding_logo.jpg', 
+                  logo: '/mi-primer-portfolio/images/linkeding_logo.jpg', 
                   year: '2024',
                   institution: 'LinkedIn'
                 },
                 { 
                   title: 'Aprende Javascript, HTML5 y CSS3', 
-                  logo: '/images/udemylogo.png', 
+                  logo: '/mi-primer-portfolio/images/udemylogo.png', 
                   year: '2025',
                   institution: 'Udemy'
                 },
                 { 
                   title: 'CSS / HTML', 
-                  logo: '/images/mimo_logo.png', 
+                  logo: '/mi-primer-portfolio/images/mimo_logo.png', 
                   year: '2025',
                   institution: 'MIMO'
                 }
@@ -228,25 +228,19 @@ function App() {
 
           <div className="social-links">
             <a href="https://www.linkedin.com/in/lourdes-miranda-024326123/" target="_blank" rel="noopener noreferrer">
-              <img src={process.env.PUBLIC_URL + "/images/linkeding_logo.jpg"} alt="LinkedIn" className="social-icon" />
+              <img src={process.env.PUBLIC_URL + "/mi-primer-portfolio/images/linkeding_logo.jpg"} alt="LinkedIn" className="social-icon" />
             </a>
             <a href="https://github.com/LourdesMiranda" target="_blank" rel="noopener noreferrer">
-              <img src={process.env.PUBLIC_URL + "/images/logo_github.png"} alt="GitHub" className="social-icon" />
-            </a>
-            <a href="https://drive.google.com/file/d/1HbpJ5E68Vglch9U9oF7T08htvVk0XgA-/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <img src={process.env.PUBLIC_URL + "/images/cv_logo.png"} alt="CV" className="social-icon" />
+              <img src={process.env.PUBLIC_URL + "/mi-primer-portfolio/images/logo_github.png"} alt="GitHub" className="social-icon" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* LIGHTBOX/MODAL PARA IMÁGENES */}
+      {/* MODAL DE IMAGEN AMPLIADA */}
       {selectedImage && (
-        <div className="image-modal" onClick={closeImage}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="close-button" onClick={closeImage}>&times;</button>
-            <img src={selectedImage} alt="Ampliación" />
-          </div>
+        <div className="modal" onClick={closeImage}>
+          <img src={selectedImage} alt="Vista ampliada" className="modal-image" />
         </div>
       )}
     </div>
