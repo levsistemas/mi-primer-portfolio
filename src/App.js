@@ -8,7 +8,7 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const openImage = (src) => {
-    setSelectedImage(src);
+    setSelectedImage(process.env.PUBLIC_URL + src);
   };
 
   const closeImage = () => {
@@ -27,33 +27,32 @@ function App() {
           <div className="project-card">
             <h3>Black Book</h3>
             <p><b><u>Proyecto personal</u></b> enfocado en el diseño de una interfaz web oscura y misteriosa para amantes de la lectura y el cine.</p> 
-            <p><b><u>Objetivo:</u></b> Desarrollar una estructura visual clara y atractiva, con diseño responsive, con el fin de practicar maquetación web con HTML, CSS, JavaScript y React.
-            </p>
+            <p><b><u>Objetivo:</u></b> Desarrollar una estructura visual clara y atractiva, con diseño responsive, con el fin de practicar maquetación web con HTML, CSS, JavaScript y React.</p>
             
             <div className="project-images-container">
               <div className="project-image-item">
                 <img 
-                  src="Wareframe_fisico.jpeg" 
+                  src={process.env.PUBLIC_URL + "/images/wareframe_fisico.jpeg"} 
                   alt="Wireframes físico" 
-                  onClick={() => openImage("Wareframe_fisico.jpeg")}
+                  onClick={() => openImage("/images/wareframe_fisico.jpeg")}
                   className="clickable-image"
                 />
                 <div className="image-description">
                   <h4>Wireframe Físico ✏️</h4>
-                  <p>Un esquema hecho a mano sobre papel cuadriculado con el objetivo de estructurar los bloques principales de contenido del proyecto. Este boceto inicial me permite organizar de manera visual y funcional los elementos interactivos con el usuario.</p>
+                  <p>Un esquema hecho a mano sobre papel cuadriculado con el objetivo de estructurar los bloques principales de contenido del proyecto.</p>
                 </div>
               </div>
               
               <div className="project-image-item">
                 <img 
-                  src="Wireframe_digital.png" 
+                  src={process.env.PUBLIC_URL + "/images/wireframe_digital.png"} 
                   alt="Wireframes digital" 
-                  onClick={() => openImage("Wireframe_digital.png")}
+                  onClick={() => openImage("/images/wireframe_digital.png")}
                   className="clickable-image"
                 />
                 <div className="image-description">
                   <h4>Wireframe Digital 💻</h4>
-                  <p>Traslado de Wireframe físico a digital para dar lugar a un layout a través de Figma con el fin de aplicar conceptos de diseño visual, espaciado, y usabilidad con las bases de HTML, CSS, JavaScript  y React.</p>
+                  <p>Traslado de Wireframe físico a digital para dar lugar a un layout a través de Figma.</p>
                 </div>
               </div>
             </div>
@@ -66,20 +65,20 @@ function App() {
         <h2>Habilidades</h2>
         <div className="skills-scroll">
           {[
-            { name: 'HTML', logo: '/logo_html_sinfondo.png', level: 90 },
-            { name: 'CSS', logo: '/css_sinfondo_logo.png', level: 80 },
-            { name: 'JavaScript', logo: '/javascript_logo_jpg.png', level: 40 },
-            { name: 'TypeScript', logo: '/logo_typescript.png', level: 0 },
-            { name: 'React', logo: '/logo_react_sinfondo.png', level: 10 },
-            { name: 'GitHub', logo: '/logo_sinfodno_github1.png', level: 10 },
-            { name: 'ChatGPT', logo: '/CHATGPT_LOGO.png', level: 85 },
-            { name: 'WordPress', logo: '/wordpress_logo.jpg', level: 50 },
-            { name: 'Salesforce', logo: '/salesforce_logo.png', level: 60 }
+            { name: 'HTML', logo: '/images/html_logo.png', level: 90 },
+            { name: 'CSS', logo: '/images/css_logo.png', level: 80 },
+            { name: 'JavaScript', logo: '/images/javascript_logo.png', level: 40 },
+            { name: 'TypeScript', logo: '/images/logo_typescript.png', level: 0 },
+            { name: 'React', logo: '/images/logo_react.png', level: 10 },
+            { name: 'GitHub', logo: '/images/logo_github.png', level: 10 },
+            { name: 'ChatGPT', logo: '/images/chatgpt_logo.png', level: 85 },
+            { name: 'WordPress', logo: '/images/wordpress_logo.jpg', level: 50 },
+            { name: 'Salesforce', logo: '/images/salesforce_logo.png', level: 60 }
           ].map((skill) => (
             <div key={skill.name} className="skill-item">
               <div className="skill-icon-container">
                 <img 
-                  src={skill.logo} 
+                  src={process.env.PUBLIC_URL + skill.logo} 
                   alt={skill.name} 
                   className="skill-icon"
                 />
@@ -112,30 +111,30 @@ function App() {
               {[
                 { 
                   title: 'E-commerce / Front-end', 
-                  logo: '/ISKAYPET_LOGO.png', 
+                  logo: '/images/iskaypet_logo.png', 
                   year: '2022-Actualidad',
                   institution: 'Iskaypet',
                   description: 'Programación y maquetación de Landing page, Home, y categorías de las campañas'
                 },
                 { 
                   title: 'Advertiser Management', 
-                  logo: '/AWIN_LOGO.jpg', 
+                  logo: '/images/awin_logo.jpg', 
                   year: '2021-2022',
                   institution: 'Awin',
-                  description: 'Programación de herramientas de interfaz de usuario para realizar los procesos de Marketing de filición'
+                  description: 'Programación de herramientas de interfaz de usuario'
                 },
                 { 
                   title: 'Especialista en SEO', 
-                  logo: '/Global_logo.jpg', 
+                  logo: '/images/global_logo.jpg', 
                   year: '2021',
                   institution: 'Global Commerce Media',
-                  description: 'Investigación para formar estructuras de redacción con Wordpress para Marketing de Contenido'
+                  description: 'Investigación para formar estructuras de redacción con Wordpress'
                 }
               ].map((experience, index) => (
                 <div key={index} className="education-item experience-item">
                   <div className="education-icon-container">
                     <img 
-                      src={experience.logo} 
+                      src={process.env.PUBLIC_URL + experience.logo} 
                       alt={experience.title} 
                       className="education-icon"
                     />
@@ -156,25 +155,25 @@ function App() {
               {[
                 { 
                   title: 'Máster en Marketing Digital y Comercio Electrónico', 
-                  logo: '/logo_eae_2.png', 
+                  logo: '/images/eae_logo.png', 
                   year: '2020-2022',
                   institution: 'EAE Business School'
                 },
                 { 
-                  title: 'Inteligencia artificial generativa para profesionales creativos: Oportunidades, retos y ética', 
-                  logo: '/Linkeding_logo.jpg', 
+                  title: 'Inteligencia artificial generativa', 
+                  logo: '/images/linkeding_logo.jpg', 
                   year: '2024',
                   institution: 'LinkedIn'
                 },
                 { 
                   title: 'Aprende Javascript, HTML5 y CSS3', 
-                  logo: '/Udemy_Logo.png', 
+                  logo: '/images/udemylogo.png', 
                   year: '2025',
                   institution: 'Udemy'
                 },
                 { 
                   title: 'CSS / HTML', 
-                  logo: '/MIMO_LOGO.png', 
+                  logo: '/images/mimo_logo.png', 
                   year: '2025',
                   institution: 'MIMO'
                 }
@@ -182,7 +181,7 @@ function App() {
                 <div key={index} className="education-item">
                   <div className="education-icon-container">
                     <img 
-                      src={education.logo} 
+                      src={process.env.PUBLIC_URL + education.logo} 
                       alt={education.title} 
                       className="education-icon"
                     />
@@ -229,19 +228,19 @@ function App() {
 
           <div className="social-links">
             <a href="https://www.linkedin.com/in/lourdes-miranda-024326123/" target="_blank" rel="noopener noreferrer">
-              <img src="/Linkeding_logo.JPG" alt="LinkedIn" className="social-icon" />
+              <img src={process.env.PUBLIC_URL + "/images/linkeding_logo.jpg"} alt="LinkedIn" className="social-icon" />
             </a>
             <a href="https://github.com/LourdesMiranda" target="_blank" rel="noopener noreferrer">
-              <img src="/logo_sinfodno_github1.png" alt="GitHub" className="social-icon" />
+              <img src={process.env.PUBLIC_URL + "/images/logo_github.png"} alt="GitHub" className="social-icon" />
             </a>
             <a href="https://drive.google.com/file/d/1HbpJ5E68Vglch9U9oF7T08htvVk0XgA-/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-              <img src="/CY_LOGO.png" alt="CV" className="social-icon" />
+              <img src={process.env.PUBLIC_URL + "/images/cv_logo.png"} alt="CV" className="social-icon" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* LIGHTBOX/MODAL PARA IMÁGENES - AHORA DENTRO DEL COMPONENTE PRINCIPAL */}
+      {/* LIGHTBOX/MODAL PARA IMÁGENES */}
       {selectedImage && (
         <div className="image-modal" onClick={closeImage}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>

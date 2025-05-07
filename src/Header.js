@@ -9,7 +9,7 @@ function Header() {
       <div className="header-content">
         <div className="logo-container">
           <img 
-            src="/Lourdes_Miranda_Moreno.jpg" 
+            src="/lourdesmirandamoreno.jpg" 
             alt="Lourdes Miranda" 
             className="profile-img"
           />
